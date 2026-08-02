@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O-CORP News | O-CORP</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html">
+        <img src="images/logo.svg" alt="O-CORP logo" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="founder.html">Founder</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="news.html">News</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card page-intro">
+        <h1>O-CORP News</h1>
+        <p>Fresh updates from the world’s most optimistic greeting card company.</p>
+      </section>
+
+      <section class="card" id="news-content">Loading news...</section>
+    </main>
+
+    <footer>
+      <p>© 2026 O-CORP. All rights reserved. Mostly.</p>
+    </footer>
+
+    <script>
+      // Owen can update the news page by editing the markdown file in the content folder.
+      async function loadMarkdown(file, targetId) {
+        const response = await fetch(file);
+        const text = await response.text();
+        const lines = text.split('\n');
+        const container = document.getElementById(targetId);
+        const html = [];
+
+        let listItems = [];
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed) {
+            if (listItems.length) {
+              html.push(`<ul>${listItems.map((item) => `<li>${item}</li>`).join('')}</ul>`);
+              listItems = [];
+            }
+            continue;
+          }
+          if (trimmed.startsWith('# ')) {
+            if (listItems.length) {
+              html.push(`<ul>${listItems.map((item) => `<li>${item}</li>`).join('')}</ul>`);
+              listItems = [];
+            }
+            html.push(`<h2>${trimmed.slice(2)}</h2>`);
+          } else if (trimmed.startsWith('- ')) {
+            listItems.push(trimmed.slice(2));
+          } else {
+            if (listItems.length) {
+              html.push(`<ul>${listItems.map((item) => `<li>${item}</li>`).join('')}</ul>`);
+              listItems = [];
+            }
+            html.push(`<p>${trimmed}</p>`);
+          }
+        }
+
+        if (listItems.length) {
+          html.push(`<ul>${listItems.map((item) => `<li>${item}</li>`).join('')}</ul>`);
+        }
+
+        container.innerHTML = html.join('');
+      }
+
+      loadMarkdown('content/news.md', 'news-content');
+    </script>
+  </body>
+</html>

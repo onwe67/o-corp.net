@@ -1,0 +1,5 @@
+<svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="120" rx="18" fill="#0b0b0b" stroke="#ff3b3b" stroke-width="4"/>
+  <text x="34" y="60" font-family="Verdana, sans-serif" font-size="44" font-weight="700" fill="#ff3b3b">O-CORP</text>
+  <text x="62" y="90" font-family="Verdana, sans-serif" font-size="18" fill="#fdf7f2">One card at a time</text>
+</svg>

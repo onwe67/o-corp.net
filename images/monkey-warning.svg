@@ -1,0 +1,13 @@
+<svg width="420" height="320" viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+  <rect width="420" height="320" rx="18" fill="#141414" stroke="#ff3b3b" stroke-width="4"/>
+  <rect x="28" y="28" width="364" height="264" rx="16" fill="#2b1a1a"/>
+  <text x="78" y="72" font-family="Verdana, sans-serif" font-size="24" fill="#ff3b3b">WARNING</text>
+  <text x="80" y="112" font-family="Verdana, sans-serif" font-size="20" fill="#fdf7f2">Flying Monkey Butts Ahead</text>
+  <circle cx="130" cy="184" r="44" fill="#8b5a2b"/>
+  <circle cx="144" cy="176" r="12" fill="#231f20"/>
+  <circle cx="172" cy="176" r="12" fill="#231f20"/>
+  <path d="M118 200c12 12 36 12 46 0" stroke="#231f20" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M90 164c-18-23-12-48 10-56" stroke="#8b5a2b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M170 154c20-26 40-28 60-12" stroke="#8b5a2b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="84" y="254" font-family="Verdana, sans-serif" font-size="16" fill="#fdf7f2">Please remain calm and keep your snacks safe.</text>
+</svg>

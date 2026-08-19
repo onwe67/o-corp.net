@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <title>Meet the Founder | O-CORP</title>
@@ -9,43 +9,61 @@
   <meta name="og:image" content="https://www.o-corp.net/images/o-corp-wide.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">
-      <img src="images/logo.svg" alt="O-CORP logo" />
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="founder.html">Founder</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="news.html">News</a>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.svg" alt="O-CORP logo" style="height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="founder.html">Founder</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <section class="card page-intro">
-      <h1>Meet the Founder</h1>
-      <p>Owen is the founder, CEO, President, and probably the person in charge of the snack table.</p>
+  <main class="container-lg py-5">
+    <section class="card mb-4">
+      <div class="card-body">
+        <h1>Meet the Founder</h1>
+        <p class="lead">Owen is the founder, CEO, President, and probably the person in charge of the snack table.</p>
+      </div>
     </section>
 
-    <section class="card split">
-      <div>
-        <img class="portrait" src="images/owen.svg" alt="A cartoon portrait of Owen" />
-      </div>
-      <div>
-        <p>Owen is a 13-year-old founder with a big imagination and an even bigger stationery budget.</p>
-        <p>He started O-CORP as a greeting card company, but he quickly realized that every great company needs a dramatic mission and a very serious logo.</p>
-        <p>Now he spends his days making cards, dreaming up clever ideas, and trying not to laugh during important meetings.</p>
+    <section class="card mb-4">
+      <div class="card-body">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <img class="img-fluid portrait-img" src="images/owen.svg" alt="A cartoon portrait of Owen" />
+          </div>
+          <div class="col-lg-7">
+            <p>Owen is a 13-year-old founder with a big imagination and an even bigger stationery budget.</p>
+            <p>He started O-CORP as a greeting card company, but he quickly realized that every great company needs a dramatic mission and a very serious logo.</p>
+            <p>Now he spends his days making cards, dreaming up clever ideas, and trying not to laugh during important meetings.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 O-CORP. All rights reserved. World domination progress may vary by region.</p>
+  <footer class="bg-dark text-secondary text-center py-5 mt-5">
+    <div class="container-lg">
+      <p>© 2026 O-CORP. All rights reserved. World domination progress may vary by region.</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

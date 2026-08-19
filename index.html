@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <title>O-CORP | Taking over the world, one card at a time</title>
@@ -9,62 +9,86 @@
   <meta name="og:image" content="https://www.o-corp.net/images/o-corp-wide.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">
-      <img src="images/logo.svg" alt="O-CORP logo" />
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="founder.html">Founder</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="news.html">News</a>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.svg" alt="O-CORP logo" style="height: 40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="founder.html">Founder</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero card">
-      <p class="eyebrow">Fictional startup • Family friendly • Slightly suspicious</p>
-      <h1>O-CORP</h1>
-      <p class="hero-tagline">Taking over the world, one card at a time.</p>
-      <div class="button-row">
-        <a class="button primary" href="founder.html">Meet the Founder</a>
-        <a class="button secondary" href="dashboard.html">World Domination Dashboard</a>
+  <main class="container-lg py-5">
+    <section class="card hero-card text-center mb-4">
+      <div class="card-body">
+        <p class="eyebrow">Fictional startup • Family friendly • Slightly suspicious</p>
+        <h1 class="display-4">O-CORP</h1>
+        <p class="lead hero-tagline">Taking over the world, one card at a time.</p>
+        <div class="d-flex gap-2 justify-content-center flex-wrap mt-3">
+          <a class="btn btn-danger" href="founder.html">Meet the Founder</a>
+          <a class="btn btn-outline-danger" href="dashboard.html">World Domination Dashboard</a>
+        </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Mission Statement</h2>
-      <p>At O-CORP, our mission is to create awesome cards, spread smiles, and steadily work toward total world domination through creativity, innovation, and excellent stationery.</p>
-      <ul>
-        <li>Make people smile</li>
-        <li>Build strong ideas</li>
-        <li>Keep the world weird in a professional way</li>
-      </ul>
+    <section class="card mb-4">
+      <div class="card-body">
+        <h2>Mission Statement</h2>
+        <p>At O-CORP, our mission is to create awesome cards, spread smiles, and steadily work toward total world domination through creativity, innovation, and excellent stationery.</p>
+        <ul>
+          <li>Make people smile</li>
+          <li>Build strong ideas</li>
+          <li>Keep the world weird in a professional way</li>
+        </ul>
+      </div>
     </section>
 
-    <section class="card split">
-      <div>
-        <h2>Meet the Founder</h2>
-        <p>Owen is a 13-year-old founder with a big imagination and an even bigger stationery budget.</p>
-        <p>He started O-CORP as a greeting card company, but he quickly realized that every great company needs a dramatic mission and a very serious logo.</p>
-        <p>Now he spends his days making cards, dreaming up clever ideas, and trying not to laugh during important meetings.</p>
-      </div>
-      <div class="mini-card">
-        <h3>Quick Facts</h3>
-        <p>Founded by Owen, age 13.</p>
-        <p>Started with greeting cards and big ideas.</p>
-        <p>Plans are mostly harmless and very creative.</p>
+    <section class="card mb-4">
+      <div class="card-body">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <h2>Meet the Founder</h2>
+            <p>Owen is a 13-year-old founder with a big imagination and an even bigger stationery budget.</p>
+            <p>He started O-CORP as a greeting card company, but he quickly realized that every great company needs a dramatic mission and a very serious logo.</p>
+            <p>Now he spends his days making cards, dreaming up clever ideas, and trying not to laugh during important meetings.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body">
+                <h3>Quick Facts</h3>
+                <p>Founded by Owen, age 13.</p>
+                <p>Started with greeting cards and big ideas.</p>
+                <p>Plans are mostly harmless and very creative.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 O-CORP. All rights reserved. World domination progress may vary by region.</p>
+  <footer class="bg-dark text-secondary text-center py-5 mt-5">
+    <div class="container-lg">
+      <p>© 2026 O-CORP. All rights reserved. World domination progress may vary by region.</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
